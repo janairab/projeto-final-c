@@ -39,7 +39,7 @@ Iniciar o projeto
 
 
 
-## Sessão 3 – 21/08/2026 
+## Sessão 3 – 21/08/2026 - 9:00 até 13:00
  
 **Funcionalidades implementadas hoje:** 
 
@@ -65,22 +65,23 @@ Entrar na lógica do jogo
 
 
 
-## Sessão X – 
- 
+## Sessão 4 – 21/08/2026 - 21:58 até 22:43
+
 **Funcionalidades implementadas hoje:**  
  
+Bibliotecas funcoes1 e prototipos criadas
+Função tempo em andamento para gerar os números aleatórios
 
+**Maior dificuldade encontrada e como resolvi (ou não resolvi):**
 
-**Maior dificuldade encontrada e como resolvi (ou não resolvi):** 
-
-
+Gerar os números de modo aleátorio (em andamento)
 
 **Próximo passo planeado:** 
 
+Concluir a função tempo e avançar para as dificuldades no jogo
 
 
- 
 **Linhas de código escritas hoje (estimativa):**
 
-
+30
 
