@@ -56,8 +56,7 @@ void centralizar(char *texto, int largura)
 
 void cabecalho()
 {
-    linha('-',40);
+    linha('-', 40);
     centralizar("Adivinha 3.0\n", 40);
-    linha('-',40);
+    linha('-', 40);
 }
- 
