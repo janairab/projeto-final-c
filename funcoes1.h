@@ -85,57 +85,93 @@ void iniciar_jogo()
 void menu ()
 {
     
-    int opcao = 0;
-
-    printf("\n>>>>> Menu\n"
-    "\n[ 1 ] Facil\n"    
-    "[ 2 ] Medio\n"
-    "[ 3 ] Dificil\n"
-    "[ 0 ] SAIR\n");
-
-    printf("\nVamos comecar? \nEscolha uma opcao! ");
-    scanf("%i", &opcao);
-
+    int opcao = 5;
     int numero = 0;
     int palpite = 0;
-    int tentativas = 0;    
+    int tentativas = 0;   
 
-    if (opcao == 1)
+    do
+    {
+        printf("\n>>>>> Menu\n"
+        "\n[ 1 ] Facil\n"    
+        "[ 2 ] Medio\n"
+        "[ 3 ] Dificil\n"
+        "[ 0 ] SAIR\n");
 
-        numero = numeros_aleatorios(1,50);
-        centralizar("- Nivel facil -\n", 40);
-        printf("\nO numero que estou pensando esta entre 1 e 50\n"
-        "Boa sorte!\n");       
-        
-        do
+        printf("\nVamos comecar? \nEscolha uma opcao! ");
+        scanf("%i", &opcao);
+    
+        if (opcao == 1)
         {
+            numero = numeros_aleatorios(1,50);
+            centralizar("- Nivel facil -\n", 40);
+            printf("\nO numero que estou pensando esta entre 1 e 50\n"
+            "Boa sorte!\n");       
+            
+            do
+            {
+            
+                printf("\nQual o seu palpite? ");
+                scanf("%d", &palpite);
+            
+                tentativas += 1;
+            
+                // Acertou
+                if (palpite == numero)
+                {
+                    printf("\nAcertaste! Eu escolhi %d!\n", numero);
+                    printf("Parabens! Vou pensar em um numero mais dificil na proxima vez!\n");
+                    printf("Voce precisou de %d tentaivas!\n", tentativas);
+                    break;
+                }
+
+                // O número absoluto é sempre positivo
+                int diferenca = abs(palpite - numero);
+
+                // Proximidade
+                if (diferenca <= 2)
+                {
+                    printf("Esta muuuuito quente!!!\n");
+                } 
+
+                else if (diferenca <= 5)
+                {
+                    printf("Esta esquentando!\n");
+                } 
+
+                else if (diferenca <= 10)
+                {
+                    printf("Esta frio!\n");
+                }
+
+                else
+                {
+                    printf("Muuuito frio, quase congelando!\n");
+                }
+                
+                
+                
+
+
+
+                } while (palpite != numero);
+            tentativas = 0;
         
-            printf("\nQual o seu palpite? ");
-            if (scanf("%d", &palpite) != 1) 
-            {
-            printf("Entrada inválida!\n");
-            } 
-            while (getchar() != '\n'); // Limpa o buffer até encontrar ENTER
-            continue;
-
-            tentativas += 1;
+        }
+        else if (opcao == 2)
+        {
+            printf("OPCAO 2");
+        }
         
-            if (palpite > numero)
-            {
-                printf("Esta mais abaixo");
-            }
+        else if (opcao == 0)
+        {
+            printf("\nVoce escolheu sair!");
+            printf("\nAte a proxima! :]");
+            break;
+        }
+        
 
-            if (palpite < numero)
-            {
-                printf("Esta mais abaixo");
-            }
-
-            if (palpite == numero)
-            {
-                printf("Acertaste! Parabéns!");
-
-            } 
-            } while (palpite != numero);
+        } while (opcao =! 0);    
 
 }
             

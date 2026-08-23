@@ -87,7 +87,7 @@ Concluir a função tempo e avançar para as dificuldades no jogo
 
 
 
-## Sessão 5 – 21/08/2026 - 13:28 até 14:30
+## Sessão 5 – 22/08/2026 - 13:28 até 14:30
 
 **Funcionalidades implementadas hoje:**  
  
@@ -128,6 +128,33 @@ Finalizar a lógica do jogo fácil, para poder ir para os outros níveis
 
 **Linhas de código escritas hoje (estimativa):**
 120 (escritas e apagadas)
+
+
+
+## Sessão 7 – 23/08/2026 - 21:00 até 22:
+
+**Funcionalidades implementadas hoje:**  
+ 
+Acrescentei a dica de maior, menor e proximidade. Mas resolvi retirar o maior e menor, deixando apenas a proximidade.
+
+
+**Maior dificuldade encontrada e como resolvi (ou não resolvi):**
+
+Encontrar como fazer a dica da proximidade, tive que pesquisar, pois não consegui fazê-la.
+O "while != 0" não funciona, tive que colocar "opcao == 0" para o programa poder encerrar
+
+**Próximo passo planeado:** 
+
+Verificar o while
+Terminar a lógica do nível fácil e partir para as próximas, que acredito que serão mais fáceis
+Pedir o nome do jogador e exibir um placar, um ranking
+Verificar o ncurses para incluir cor ao programa
+
+**Linhas de código escritas hoje (estimativa):**
+
+60 escritas e muitas apagadas
+
+
 
 
 
