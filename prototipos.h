@@ -3,4 +3,5 @@
 void linha(char c, int qtd);
 void centralizar(char *texto, int largura);
 void cabecalho(void);
-void tempo();
+int numeros_aleatorios(int min, int max);
+void menu();

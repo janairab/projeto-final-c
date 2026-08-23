@@ -54,17 +54,92 @@ void centralizar(char *texto, int largura)
 // Função para o cabeçalho
 void cabecalho()
 {
-    linha('-', 40);
-    centralizar("Adivinha 3.0\n", 40);
-    linha('-', 40);
+    linha('-', 50);
+    centralizar("Adivinhas? ;]", 50);
+    centralizar("3.0\n", 50);
+    linha('-', 50);
 }
 
-//Função para o tempo - MAX 32767
-void tempo()
+//Função para os números aleatórios - MAX 32767
+int numeros_aleatorios(int min, int max)
 {
+    // Retorna a hora atual em segundos e garante que o gerador dê resultados diferentes a casa vez que for executado
     srand(time(NULL));
-    int random = rand();
 
-    printf("%d", rand());
+    // calcula a amplitude do intervalo, ou seja, entre o min e o max especificado.
+    int gerar_numero = (rand() % (max - min + 1) + min);
+
+    printf("\n");
+
+    return gerar_numero;
 }
+
+
+void iniciar_jogo()
+{
+    printf(" - Jogo de Adivinhar -");
+    printf("Você consegue adivinhar o número que estou pensando antes que o tempo acabe?");
+
+}
+
+void menu ()
+{
+    
+    int opcao = 0;
+
+    printf("\n>>>>> Menu\n"
+    "\n[ 1 ] Facil\n"    
+    "[ 2 ] Medio\n"
+    "[ 3 ] Dificil\n"
+    "[ 0 ] SAIR\n");
+
+    printf("\nVamos comecar? \nEscolha uma opcao! ");
+    scanf("%i", &opcao);
+
+    int numero = 0;
+    int palpite = 0;
+    int tentativas = 0;    
+
+    if (opcao == 1)
+
+        numero = numeros_aleatorios(1,50);
+        centralizar("- Nivel facil -\n", 40);
+        printf("\nO numero que estou pensando esta entre 1 e 50\n"
+        "Boa sorte!\n");       
+        
+        do
+        {
+        
+            printf("\nQual o seu palpite? ");
+            if (scanf("%d", &palpite) != 1) 
+            {
+            printf("Entrada inválida!\n");
+            } 
+            while (getchar() != '\n'); // Limpa o buffer até encontrar ENTER
+            continue;
+
+            tentativas += 1;
+        
+            if (palpite > numero)
+            {
+                printf("Esta mais abaixo");
+            }
+
+            if (palpite < numero)
+            {
+                printf("Esta mais abaixo");
+            }
+
+            if (palpite == numero)
+            {
+                printf("Acertaste! Parabéns!");
+
+            } 
+            } while (palpite != numero);
+
+}
+            
+
+
+
 #endif

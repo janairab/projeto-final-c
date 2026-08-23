@@ -85,3 +85,65 @@ Concluir a função tempo e avançar para as dificuldades no jogo
 
 30
 
+
+
+## Sessão 5 – 21/08/2026 - 13:28 até 14:30
+
+**Funcionalidades implementadas hoje:**  
+ 
+Alterei o nome da função tempo para números aleatórios, porque estava me fazendo confusão.
+ALterei o cabeçalho também.
+
+
+**Maior dificuldade encontrada e como resolvi (ou não resolvi):**
+
+Colocar o gerador de números para funcionar saindo do mesmo ponto, pois estava sempre gerando números próximos, ex: 996, 998...
+
+
+**Próximo passo planeado:** 
+
+
+
+
+**Linhas de código escritas hoje (estimativa):**
+
+
+
+
+## Sessão 6 – 23/08/2026 - 13:37 até 15:16 
+
+**Funcionalidades implementadas hoje:**  
+ 
+Lógica do jogo fácil quase completa
+Função para o menu e para iniciar o jogo
+
+**Maior dificuldade encontrada e como resolvi (ou não resolvi):**
+
+Colocar as dicas se está acima ou abaixo, muito perto ou muito longe
+
+**Próximo passo planeado:** 
+
+Finalizar a lógica do jogo fácil, para poder ir para os outros níveis
+
+
+**Linhas de código escritas hoje (estimativa):**
+120 (escritas e apagadas)
+
+
+
+## Sessão x – / /2026 - 
+
+**Funcionalidades implementadas hoje:**  
+ 
+
+
+**Maior dificuldade encontrada e como resolvi (ou não resolvi):**
+
+
+
+**Próximo passo planeado:** 
+
+
+
+
+**Linhas de código escritas hoje (estimativa):**

@@ -7,8 +7,12 @@
 // Função principal
 int main(){
    
-    cabecalho();    
-    tempo();
+    cabecalho(); 
+    menu();
+
+
+    
+    numeros_aleatorios(1, 50);
 
     
     return 0;
