@@ -102,12 +102,12 @@ Colocar o gerador de números para funcionar saindo do mesmo ponto, pois estava 
 
 **Próximo passo planeado:** 
 
-
+Lógica dos níveis
 
 
 **Linhas de código escritas hoje (estimativa):**
 
-
+60
 
 
 ## Sessão 6 – 23/08/2026 - 13:37 até 15:16 
@@ -131,7 +131,7 @@ Finalizar a lógica do jogo fácil, para poder ir para os outros níveis
 
 
 
-## Sessão 7 – 23/08/2026 - 21:00 até 22:
+## Sessão 7 – 23/08/2026 - 21:00 até 22:49
 
 **Funcionalidades implementadas hoje:**  
  
@@ -156,6 +156,29 @@ Verificar o ncurses para incluir cor ao programa
 
 
 
+
+
+## Sessão 8 – 24/08/2026 - 21:00 até 23:00
+
+**Funcionalidades implementadas hoje:**  
+ 
+Niveis facil, medio e dificil concluidos, precisando apenas de ajustes
+Biblioteca niveis criada
+
+**Maior dificuldade encontrada e como resolvi (ou não resolvi):**
+
+A validação de número negativou ou acima das opções estava a dar erro (resolvido)
+Mensagem de erro no palpite, sai junto com a dica de proximidade e encerra o que deveria ser um loop (não resolvido) 
+Mensagem de erro em opção, saia junto com a opção válida, mesmo a lógica estando certa. Quando adicionei os outros niveis, o erro não apareceu mais.
+
+**Próximo passo planeado:** 
+
+Ajustar os niveis, pois está encerrando ao invés de manter o loop
+
+
+**Linhas de código escritas hoje (estimativa):**
+
+Mais de 200, escritas e apagadas
 
 
 ## Sessão x – / /2026 - 

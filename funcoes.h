@@ -1,14 +1,10 @@
- // Criar a biblioteca
- #ifndef LIB_TEST_H 
- #define LIB_TEST_H
-
- #include <stdio.h>
- #include <string.h>
- #include <stdlib.h>
- #include <time.h>
-
- // Importar biblioteca criada
- #include "prototipos.h" 
+// Criar a biblioteca
+#ifndef LIB_TEST_H 
+#define LIB_TEST_H
+ 
+// Importar biblioteca criada
+#include "prototipos.h" 
+#include "niveis.h"
 
 // Função para as linhas
 void linha(char c, int qtd)
@@ -86,9 +82,6 @@ void menu ()
 {
     
     int opcao = 5;
-    int numero = 0;
-    int palpite = 0;
-    int tentativas = 0;   
 
     do
     {
@@ -100,67 +93,26 @@ void menu ()
 
         printf("\nVamos comecar? \nEscolha uma opcao! ");
         scanf("%i", &opcao);
-    
+            
+            if (opcao < 0 || opcao > 3) {
+                printf("\nErro: Opcao invalida!\n"); // NÃO FUNCIONA, quando chama o número válido, a mensagem de erro aparece
+                while (getchar() != '\n'); // descarta caracteres inválidos
+            } 
+
+            
         if (opcao == 1)
         {
-            numero = numeros_aleatorios(1,50);
-            centralizar("- Nivel facil -\n", 40);
-            printf("\nO numero que estou pensando esta entre 1 e 50\n"
-            "Boa sorte!\n");       
-            
-            do
-            {
-            
-                printf("\nQual o seu palpite? ");
-                scanf("%d", &palpite);
-            
-                tentativas += 1;
-            
-                // Acertou
-                if (palpite == numero)
-                {
-                    printf("\nAcertaste! Eu escolhi %d!\n", numero);
-                    printf("Parabens! Vou pensar em um numero mais dificil na proxima vez!\n");
-                    printf("Voce precisou de %d tentaivas!\n", tentativas);
-                    break;
-                }
-
-                // O número absoluto é sempre positivo
-                int diferenca = abs(palpite - numero);
-
-                // Proximidade
-                if (diferenca <= 2)
-                {
-                    printf("Esta muuuuito quente!!!\n");
-                } 
-
-                else if (diferenca <= 5)
-                {
-                    printf("Esta esquentando!\n");
-                } 
-
-                else if (diferenca <= 10)
-                {
-                    printf("Esta frio!\n");
-                }
-
-                else
-                {
-                    printf("Muuuito frio, quase congelando!\n");
-                }
-                
-                
-                
-
-
-
-                } while (palpite != numero);
-            tentativas = 0;
-        
+           nivel_facil();
         }
+
         else if (opcao == 2)
         {
-            printf("OPCAO 2");
+            nivel_medio();
+        }
+        
+        else if (opcao == 3)
+        {
+            nivel_dificil();
         }
         
         else if (opcao == 0)
@@ -170,12 +122,9 @@ void menu ()
             break;
         }
         
-
-        } while (opcao =! 0);    
+        } while (opcao > 3 || opcao < 0);    
 
 }
             
-
-
 
 #endif

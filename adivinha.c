@@ -1,5 +1,5 @@
 //Bibliotecas importadas
-#include "funcoes1.h"
+#include "prototipos.h" 
 
 
 //#include <ncurses.h> - Não funciona
@@ -8,13 +8,10 @@
 int main(){
    
     cabecalho(); 
-    menu();
-
-
-    
+    menu();   
     numeros_aleatorios(1, 50);
-
-    
+       
     return 0;
 }
 
+  
