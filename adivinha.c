@@ -2,14 +2,16 @@
 #include "prototipos.h" 
 
 
-//#include <ncurses.h> - Não funciona
+//#include <ncurses.h>
 
 // Função principal
 int main(){
    
-    cabecalho(); 
+    
+    cabecalho();
+    desafio();
     menu();   
-    numeros_aleatorios(1, 50);
+    
        
     return 0;
 }

@@ -50,10 +50,13 @@ void centralizar(char *texto, int largura)
 // Função para o cabeçalho
 void cabecalho()
 {
+    system("clear");  
     linha('-', 50);
     centralizar("Adivinhas? ;]", 50);
     centralizar("3.0\n", 50);
     linha('-', 50);
+    printf("\n");
+    Sleep(1000); 
 }
 
 //Função para os números aleatórios - MAX 32767
@@ -65,27 +68,33 @@ int numeros_aleatorios(int min, int max)
     // calcula a amplitude do intervalo, ou seja, entre o min e o max especificado.
     int gerar_numero = (rand() % (max - min + 1) + min);
 
-    printf("\n");
+    //printf("\n");
 
     return gerar_numero;
 }
 
 
-void iniciar_jogo()
+void desafio()
 {
-    printf(" - Jogo de Adivinhar -");
-    printf("Você consegue adivinhar o número que estou pensando antes que o tempo acabe?");
+    centralizar("- Desafio -", 50);
+    printf("\n\n");
+    printf("\nVoce consegue adivinhar o numero que estou pensando\n");
+    centralizar("em poucas tentativas?\n", 50);
+    printf("\n");
+    Sleep(1000); 
 
 }
 
+
 void menu ()
 {
-    
     int opcao = 5;
+
+    Sleep(1000); 
 
     do
     {
-        printf("\n>>>>> Menu\n"
+        printf("\n----> MENU\n"
         "\n[ 1 ] Facil\n"    
         "[ 2 ] Medio\n"
         "[ 3 ] Dificil\n"
@@ -94,12 +103,12 @@ void menu ()
         printf("\nVamos comecar? \nEscolha uma opcao! ");
         scanf("%i", &opcao);
             
-            if (opcao < 0 || opcao > 3) {
-                printf("\nErro: Opcao invalida!\n"); // NÃO FUNCIONA, quando chama o número válido, a mensagem de erro aparece
-                while (getchar() != '\n'); // descarta caracteres inválidos
-            } 
-
-            
+        if (opcao < 0 || opcao > 3)
+        {
+            printf("Erro: Opcao invalida!\n");
+            while (getchar() != '\n'); // descarta caracteres inválidos
+        } 
+                          
         if (opcao == 1)
         {
            nivel_facil();
@@ -107,6 +116,7 @@ void menu ()
 
         else if (opcao == 2)
         {
+           
             nivel_medio();
         }
         
@@ -119,12 +129,16 @@ void menu ()
         {
             printf("\nVoce escolheu sair!");
             printf("\nAte a proxima! :]");
+            printf("\n");
+            Sleep(5000);
+            system("clear");    
             break;
         }
-        
-        } while (opcao > 3 || opcao < 0);    
+    
+
+
+    } while (opcao =! 0);    
 
 }
-            
 
 #endif

@@ -181,19 +181,37 @@ Ajustar os niveis, pois está encerrando ao invés de manter o loop
 Mais de 200, escritas e apagadas
 
 
-## Sessão x – / /2026 - 
+## Sessão 9 – 29/08/2026 - 21:50 até 02:02 - 30/08/2026 
 
 **Funcionalidades implementadas hoje:**  
- 
+
+System clear para limpar a tela após vencer uma partida
+Sleep para aparecer mais lentamente as mensagens e principalmente na mensagem de vitória, antes de limpar a tela
+Dicas de "mais acima" ou "mais abaixo" nos niveis médio e difícil
 
 
 **Maior dificuldade encontrada e como resolvi (ou não resolvi):**
+Quando chama o número válido, a mensagem de erro aparece. O do while estava com o parametro incorreto (resolvido)
+Menu parou de funcionar: acabei por perceber que funcionava, mas não aparecia mensagem para ser digitado novamente a opção, porém podia ser colocada a opção (resolvido)
+Ncurses ainda sem funcionar, erro diz que não existe diretório
+O termo "if (palpite >= 0 || palpite <= 50), não funcionava. Mostrava outros else if, quando era para mostrar apenas um. 
 
+Exemplo: 
+Qual o seu palpite? -1
+Erro: Opcao invalida!
+Muuuito frio, quase congelando!
+
+Precisei fazer dessa forma, para o código funcionar do jeito que eu queria.
+if (palpite != numero)
+    if (palpite >= 0)
+        if (palpite <= 50)
 
 
 **Próximo passo planeado:** 
 
-
+escrever o READ-ME
+Tentar incluir o Ncurses
 
 
 **Linhas de código escritas hoje (estimativa):**
+120 - escritas, apagadas e alteradas
