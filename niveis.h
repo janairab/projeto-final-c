@@ -12,12 +12,11 @@ void nivel_facil()
 {
 
     numero = numeros_aleatorios(1,50);
-    printf("\n");
-    centralizar("- Nivel facil -\n", 40);
-    printf("\n");
+    printf("\033[32m\n");
+    centralizar("- Nivel facil -", 40);
+    printf("\n\033[0m\n");
     printf("\nO numero que estou pensando esta entre 1 e 50\n"
     "Boa sorte!\n");
-    printf("%d", numero);
     
     tentativas = 0;
 
@@ -54,29 +53,31 @@ void nivel_facil()
         // O número absoluto é sempre positivo
         int diferenca = abs(palpite - numero);
 
-        if (palpite >= 0 || palpite <= 50)
+        if (palpite != numero)
+            if (palpite >= 0)
+                if (palpite <= 150)
 
-            // Proximidade
-            if (diferenca <= 2)
-            {
-                printf("Esta muuuuito quente!!!\n");
-            } 
+                    // Proximidade
+                    if (diferenca <= 2)
+                    {
+                        printf("Esta muuuuito quente!!!\n");
+                    } 
 
-            else if (diferenca <= 5)
-            {
-                printf("Esta esquentando!\n");
-            } 
+                    else if (diferenca <= 5)
+                    {
+                        printf("Esta esquentando!\n");
+                    } 
 
-            else if (diferenca <= 10)
-            {
-                printf("Esta frio!\n");
-            }
+                    else if (diferenca <= 10)
+                    {
+                        printf("Esta frio!\n");
+                    }
 
-            else
-            {
-                printf("Muuuito frio, quase congelando!\n");
-            }
-            
+                    else
+                    {
+                        printf("Muuuito frio, quase congelando!\n");
+                    }
+                    
     } while (palpite != numero); 
     Sleep(6000);
     system("clear");
@@ -87,9 +88,9 @@ void nivel_medio()
 {
 
     numero = numeros_aleatorios(1,150);
-    printf("\n");
+    printf("\n\033[33m");
     centralizar("- Nivel Medio -\n", 40);
-    printf("\n");
+    printf("\033[0m\n");
     printf("\nO numero que estou pensando esta entre 1 e 150\n"
     "Boa sorte!\n");
 
@@ -181,9 +182,9 @@ void nivel_dificil()
 {
 
     numero = numeros_aleatorios(1,300);
-    printf("\n");
+    printf("\n\033[31m\n");
     centralizar("- Nivel Dificil -\n", 40);
-    printf("\n");
+    printf("\n\033[0m\n");
     printf("\nO numero que estou pensando esta entre 1 e 300\n"
     "Boa sorte!\n");
 

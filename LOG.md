@@ -1,3 +1,12 @@
+## Sessão Inicial
+
+Comecei por ter duas ideias, mas decidi focar no jogo de adivinha, que eu já tinha feito em Python, numa versão mais leve, sem loops e níveis.
+
+Optei por esse projeto porque minha experiência em C era quase nenhuma no inicio da UFCD, o pouco que sabia era o que aprendi em Python, e que, de uma forma diferente também se usa em C.
+
+Meu portátil acabou por me atrapalhar mais do que ajudar. Várias funcionalidades eu não pude usar, porque sempre apresentava erros, erros fatais, não reconhecimento de diretório (mesmo atualizando o path no json) e acesso negado com parte das funcionalidades bloqueadas.
+
+
 ## Sessão 1 – 18/08/2026
  
 **Funcionalidades implementadas hoje:**  
@@ -215,3 +224,26 @@ Tentar incluir o Ncurses
 
 **Linhas de código escritas hoje (estimativa):**
 120 - escritas, apagadas e alteradas
+
+
+
+
+## Sessão 10 – 30/08/2026
+
+
+**Funcionalidades implementadas hoje:**  
+ 
+Apenas ajustes finais como cores e na lógica dos níveis
+
+**Maior dificuldade encontrada e como resolvi (ou não resolvi):** 
+
+O VS CODE não está reconhecendo as funcionalidade do ncurses e os comandos code, make ou o executar.
+Tentei colocar o ncurses até como PDCurses e utilizando um WSL, mas não resultou em nada 
+
+**Próximo passo planeado:** 
+
+Apresentação do jogo
+
+ 
+**Linhas de código escritas hoje (estimativa):**
+10

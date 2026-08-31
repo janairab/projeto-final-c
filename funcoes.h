@@ -51,10 +51,14 @@ void centralizar(char *texto, int largura)
 void cabecalho()
 {
     system("clear");  
+    printf("\033[31m");
     linha('-', 50);
+    printf("\033[0m");
     centralizar("Adivinhas? ;]", 50);
     centralizar("3.0\n", 50);
+    printf("\033[31m");
     linha('-', 50);
+    printf("\033[0m");
     printf("\n");
     Sleep(1000); 
 }
@@ -76,8 +80,9 @@ int numeros_aleatorios(int min, int max)
 
 void desafio()
 {
+    printf("\033[31m");
     centralizar("- Desafio -", 50);
-    printf("\n\n");
+    printf("\033[0m\n\n");
     printf("\nVoce consegue adivinhar o numero que estou pensando\n");
     centralizar("em poucas tentativas?\n", 50);
     printf("\n");
@@ -94,11 +99,11 @@ void menu ()
 
     do
     {
-        printf("\n----> MENU\n"
-        "\n[ 1 ] Facil\n"    
-        "[ 2 ] Medio\n"
-        "[ 3 ] Dificil\n"
-        "[ 0 ] SAIR\n");
+        printf("\n\033[35m----> MENU\033[0m\n"
+        "\n\033[32m[ 1 ] Facil\033[0m\n"    
+        "\033[33m[ 2 ] Medio\n\033[0m"
+        "\033[31m[ 3 ] Dificil\n\033[0m"
+        "\n\033[35m[ 0 ] SAIR\033[0m\n");
 
         printf("\nVamos comecar? \nEscolha uma opcao! ");
         scanf("%i", &opcao);
@@ -127,9 +132,9 @@ void menu ()
         
         else if (opcao == 0)
         {
-            printf("\nVoce escolheu sair!");
+            printf("\n\033[94mVoce escolheu sair!");
             printf("\nAte a proxima! :]");
-            printf("\n");
+            printf("\033[0m\n");
             Sleep(5000);
             system("clear");    
             break;
